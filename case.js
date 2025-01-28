@@ -45,7 +45,7 @@ module.exports = async (x, msg, store) => {
       const [url, time, proxy] = args;
 
       // Jalankan perintah dengan child_process
-      const cmd = `node PUT ${url} ${time} 16 128 ${proxy}`;
+      const cmd = `node tornado PUT ${url} ${time} 16 128 ${proxy}`;
       exec(cmd, (error, stdout, stderr) => {
         if (error) {
           reply(`Error: ${error.message}`);
